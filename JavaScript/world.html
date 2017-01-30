@@ -6,20 +6,17 @@
 </head>
 <body>
 <script> 
-var valor = 10;
-alert(valor);
-
-valor = "oi";
-alert(valor);
-
-var array = [ 'guilherme', 'masculino', 18 ]
-for(var i=0; i < array.length; i++){
-	alert(array[i]);
+function lampadaAcesa(){
+	document.getElementById("luz").src = "lampada_acesa.jpg";
 }
-/*
-alert(valor);*/
+function lampadaApagada(){
+document.getElementById("luz").src = 'lampada_apagada.jpg';
+}
+function lampadaQuebrada(){
+	document.getElementById("luz").src = 'lampada_quebrada.jpg';
+}
 </script>
-
+<img src="lampada_apagada.jpg" id="luz" onmouseover="lampadaAcesa()" onmouseout="lampadaApagada()" onclick="LampadaQuebrada()">
 
 </body>
 </html>

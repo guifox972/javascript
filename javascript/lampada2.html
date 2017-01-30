@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>oi</title>
+
+</head>
+<body>
+<script> 
+var quebrada = false;
+function mudaLampada(tipo){
+	
+	if (!quebrada) {
+				document.getElementById("luz").src = tipo + ".jpg";
+				if (tipo == lampada_quebrada) {
+			quebrada = true;
+		}
+	}
+	
+}
+
+</script>
+<img src="lampada_apagada.jpg" id="luz" onmouseover="mudaLampada("lampada_acesa.jpg")" onmouseout="mudaLampada("lampada_apagada.jpg")" onclick="mudaLampada("lampada_quebrada.jpg")">
+
+</body>
+</html>
